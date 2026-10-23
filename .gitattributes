@@ -1,0 +1,6 @@
+# Preserve pinned snapshots and rule-lock bytes across Windows/Linux checkouts.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+vendor/** -text
+rules/lock.json -text

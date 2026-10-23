@@ -1,0 +1,16 @@
+{
+  "lock_version": "skill-lock/1",
+  "skill_path": "../mechanical-design-sop/SKILL.md",
+  "skill_sha256": "605b5c595fef9e1ebed850b56569136808b06a829c450fed55143e645a18f05f",
+  "files": {
+    "agents/openai.yaml": "a954bf988e9640461e838d9ccb1c4395f38c9843f292ee9dd6a534a49e7bfc4a",
+    "assets/design-record-template.md": "daacc2f87781e87c1da8d77f8f65e87a1c135ea92ef41a669d73f3317a7295f8",
+    "assets/verification-matrix.csv": "c0dea68c203febda8b8cd06568d7a6cd10ba19f197ceffc03bca6853b2034f95",
+    "references/cad-and-assembly.md": "c25a70b63524fbab590bf42f5e9ab58182b8d155a13791fa1f1b5ed9b4d900f0",
+    "references/clearance-and-motion.md": "eb9982fc01c447acbcea8bfcde99010d90d3ee90bb2406bb1bafaef6659a358b",
+    "references/loads-and-manufacturing.md": "cfaf4a426c8bee4970228766a93a97fd7497e9d89b1da8056bb6846b79dddbc4",
+    "references/mass-and-simulation.md": "b2147e2de17bfe07e7c0bb9191282ce78f2b89f6dc8340eeb47d81579c7f5a79",
+    "references/production-and-delivery.md": "0ad3bf213eed4512a966f1d4684001996b14647e781d7bb79b1cc8d736019540",
+    "SKILL.md": "605b5c595fef9e1ebed850b56569136808b06a829c450fed55143e645a18f05f"
+  }
+}

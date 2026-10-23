@@ -1,0 +1,135 @@
+{
+  "manifest_version": "contract-cases/1",
+  "cases": [
+    {
+      "path": "positive/plate-mm.json",
+      "ready": true,
+      "expected_codes": []
+    },
+    {
+      "path": "positive/plate-cm.json",
+      "ready": true,
+      "expected_codes": []
+    },
+    {
+      "path": "positive/bracket.json",
+      "ready": true,
+      "expected_codes": []
+    },
+    {
+      "path": "positive/box.json",
+      "ready": true,
+      "expected_codes": []
+    },
+    {
+      "path": "negative/unknown-height.json",
+      "ready": false,
+      "expected_codes": [
+        "unknown_parameter",
+        "unconfirmed_parameter",
+        "source_missing"
+      ]
+    },
+    {
+      "path": "negative/unconfirmed-size.json",
+      "ready": false,
+      "expected_codes": [
+        "unconfirmed_parameter"
+      ]
+    },
+    {
+      "path": "negative/proposal-self-confirms.json",
+      "ready": false,
+      "expected_codes": [
+        "proposal_unconfirmed"
+      ]
+    },
+    {
+      "path": "negative/missing-source.json",
+      "ready": false,
+      "expected_codes": [
+        "source_missing"
+      ]
+    },
+    {
+      "path": "negative/hard-constraint-conflict.json",
+      "ready": false,
+      "expected_codes": [
+        "constraint_conflict"
+      ]
+    },
+    {
+      "path": "negative/hole-breakout.json",
+      "ready": false,
+      "expected_codes": [
+        "hole_breakout"
+      ]
+    },
+    {
+      "path": "negative/holes-overlap.json",
+      "ready": false,
+      "expected_codes": [
+        "hole_overlap"
+      ]
+    },
+    {
+      "path": "negative/unsupported-unit.json",
+      "ready": false,
+      "expected_codes": [
+        "contract_invalid"
+      ]
+    },
+    {
+      "path": "negative/unknown-parameter.json",
+      "ready": false,
+      "expected_codes": [
+        "parameter_set"
+      ]
+    },
+    {
+      "path": "negative/arbitrary-code.json",
+      "ready": false,
+      "expected_codes": [
+        "contract_invalid"
+      ]
+    },
+    {
+      "path": "negative/outdated-skill.json",
+      "ready": false,
+      "expected_codes": [
+        "skill_version"
+      ]
+    },
+    {
+      "path": "negative/modify-missing-baseline.json",
+      "ready": false,
+      "expected_codes": [
+        "baseline_missing"
+      ]
+    },
+    {
+      "path": "negative/stale-ledger.json",
+      "ready": false,
+      "expected_codes": [
+        "stale_revision"
+      ],
+      "validation_context": {
+        "expected_revision": 2
+      }
+    },
+    {
+      "path": "negative/solid-instead-of-bracket.json",
+      "ready": false,
+      "expected_codes": [
+        "bracket_thickness"
+      ]
+    },
+    {
+      "path": "negative/no-box-cavity.json",
+      "ready": false,
+      "expected_codes": [
+        "box_wall"
+      ]
+    }
+  ]
+}

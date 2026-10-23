@@ -1,0 +1,4 @@
+interface:
+  display_name: "机械结构设计 SOP"
+  short_description: "覆盖需求与基线、装配、干涉、质量惯量、仿真和生产交付的通用流程"
+  default_prompt: "使用 $mechanical-design-sop，按本项目约束检查和完善机械结构，完成本次要求的验证与交付。"

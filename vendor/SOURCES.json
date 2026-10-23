@@ -1,0 +1,199 @@
+{
+  "schema_version": "vendor-sources/1",
+  "policy": "Vendored files are byte-for-byte copies of the recorded checkout. Git blob hashes and checkout line-ending transforms are recorded separately. Only listed fixed runtime resources are included; no environments, credentials or design results.",
+  "sources": [
+    {
+      "name": "mechanical-design-sop",
+      "kind": "vendored",
+      "repository": null,
+      "commit": null,
+      "files": [
+        {
+          "source_path": "agents/openai.yaml",
+          "path": "vendor/mechanical-design-sop/agents/openai.yaml",
+          "sha256": "a954bf988e9640461e838d9ccb1c4395f38c9843f292ee9dd6a534a49e7bfc4a",
+          "size_bytes": 313
+        },
+        {
+          "source_path": "assets/design-record-template.md",
+          "path": "vendor/mechanical-design-sop/assets/design-record-template.md",
+          "sha256": "daacc2f87781e87c1da8d77f8f65e87a1c135ea92ef41a669d73f3317a7295f8",
+          "size_bytes": 2099
+        },
+        {
+          "source_path": "assets/verification-matrix.csv",
+          "path": "vendor/mechanical-design-sop/assets/verification-matrix.csv",
+          "sha256": "c0dea68c203febda8b8cd06568d7a6cd10ba19f197ceffc03bca6853b2034f95",
+          "size_bytes": 166
+        },
+        {
+          "source_path": "references/cad-and-assembly.md",
+          "path": "vendor/mechanical-design-sop/references/cad-and-assembly.md",
+          "sha256": "c25a70b63524fbab590bf42f5e9ab58182b8d155a13791fa1f1b5ed9b4d900f0",
+          "size_bytes": 4788
+        },
+        {
+          "source_path": "references/clearance-and-motion.md",
+          "path": "vendor/mechanical-design-sop/references/clearance-and-motion.md",
+          "sha256": "eb9982fc01c447acbcea8bfcde99010d90d3ee90bb2406bb1bafaef6659a358b",
+          "size_bytes": 5087
+        },
+        {
+          "source_path": "references/loads-and-manufacturing.md",
+          "path": "vendor/mechanical-design-sop/references/loads-and-manufacturing.md",
+          "sha256": "cfaf4a426c8bee4970228766a93a97fd7497e9d89b1da8056bb6846b79dddbc4",
+          "size_bytes": 3143
+        },
+        {
+          "source_path": "references/mass-and-simulation.md",
+          "path": "vendor/mechanical-design-sop/references/mass-and-simulation.md",
+          "sha256": "b2147e2de17bfe07e7c0bb9191282ce78f2b89f6dc8340eeb47d81579c7f5a79",
+          "size_bytes": 4618
+        },
+        {
+          "source_path": "references/production-and-delivery.md",
+          "path": "vendor/mechanical-design-sop/references/production-and-delivery.md",
+          "sha256": "0ad3bf213eed4512a966f1d4684001996b14647e781d7bb79b1cc8d736019540",
+          "size_bytes": 5024
+        },
+        {
+          "source_path": "SKILL.md",
+          "path": "vendor/mechanical-design-sop/SKILL.md",
+          "sha256": "605b5c595fef9e1ebed850b56569136808b06a829c450fed55143e645a18f05f",
+          "size_bytes": 9015
+        }
+      ],
+      "source_snapshot": "../mechanical-design-sop",
+      "note": "Local policy snapshot; no public upstream, Git commit, author or upstream license is recorded.",
+      "rule_lock": "rules/lock.json",
+      "rule_lock_sha256": "41599260c6b5ec48d0b77064ab1831122a73140601faf953f24343dabacedb76"
+    },
+    {
+      "name": "solidworks-agent",
+      "kind": "vendored",
+      "repository": "https://github.com/kbedrich/solidworks-agent",
+      "commit": "3cd587d533ee0f333d453da818e1219dbba9e8c5",
+      "files": [
+        {
+          "source_path": "LICENSE",
+          "path": "vendor/solidworks-agent/LICENSE",
+          "sha256": "1b007dac487ab52d1425d46666c1e1bbbd5f3254cd698b1107b2363078496d59",
+          "size_bytes": 1151,
+          "git_blob_sha256": "20473fd9acfd6fc56abe6ec8a4cd5eabcc9a5821cee61de5e0b40f4589280c99",
+          "checkout_transform": "Git checkout LF to CRLF only"
+        },
+        {
+          "source_path": "NOTICE",
+          "path": "vendor/solidworks-agent/NOTICE",
+          "sha256": "115ad0c817c7d6b013187be47f68ada7ac5e6f803a3f79bedcd25123da696a3e",
+          "size_bytes": 916,
+          "git_blob_sha256": "6cdc596e9b623a649d77eacef0ed27c1f3d4d1e05b11f3f346da72b75bb5e1ea",
+          "checkout_transform": "Git checkout LF to CRLF only"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_preflight.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_preflight.py",
+          "sha256": "8fd2cd5a9289bc1c4fd5556eeb3218f73a5af20325996e4045885b2c151c184a",
+          "size_bytes": 9100,
+          "git_blob_sha256": "8fd2cd5a9289bc1c4fd5556eeb3218f73a5af20325996e4045885b2c151c184a",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_resource_guard.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_resource_guard.py",
+          "sha256": "fb135937eabf6b3d8e2d31a7a99e47bbdb6e4715d220cb82e82b39999a951ce1",
+          "size_bytes": 4934,
+          "git_blob_sha256": "fb135937eabf6b3d8e2d31a7a99e47bbdb6e4715d220cb82e82b39999a951ce1",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_connect.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_connect.py",
+          "sha256": "78c8be7a7fc53ca0404f5b08dad83f5d02c5bc7f93def1306dd6417a581c7fba",
+          "size_bytes": 10189,
+          "git_blob_sha256": "78c8be7a7fc53ca0404f5b08dad83f5d02c5bc7f93def1306dd6417a581c7fba",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_documents.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_documents.py",
+          "sha256": "186c770f797db07c2c1a7afa6fb4d3708d1e2e11c8ab69e8c1526e6e4477e3ae",
+          "size_bytes": 7829,
+          "git_blob_sha256": "186c770f797db07c2c1a7afa6fb4d3708d1e2e11c8ab69e8c1526e6e4477e3ae",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_inspect.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_inspect.py",
+          "sha256": "049e60d19531e7fd99482765754400b0f3b2df962e243d4ed522da662baf3cba",
+          "size_bytes": 12409,
+          "git_blob_sha256": "049e60d19531e7fd99482765754400b0f3b2df962e243d4ed522da662baf3cba",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_part.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_part.py",
+          "sha256": "607bdce3394a1fe5ae302a1d085bff0f93184e6747d2569c73f772256d50c938",
+          "size_bytes": 22013,
+          "git_blob_sha256": "607bdce3394a1fe5ae302a1d085bff0f93184e6747d2569c73f772256d50c938",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_review.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_review.py",
+          "sha256": "a35c4024567de3fc72e20ed074c71cbf17d11f0be9a37f4dab03fef6c3fea202",
+          "size_bytes": 17957,
+          "git_blob_sha256": "a35c4024567de3fc72e20ed074c71cbf17d11f0be9a37f4dab03fef6c3fea202",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_runtime.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_runtime.py",
+          "sha256": "a4956a5fc1486ec89f537497ea325c1779b93543d573626dc23100871868490f",
+          "size_bytes": 7511,
+          "git_blob_sha256": "a4956a5fc1486ec89f537497ea325c1779b93543d573626dc23100871868490f",
+          "checkout_transform": "none"
+        },
+        {
+          "source_path": "skills/solidworks/scripts/sw_evidence.py",
+          "path": "vendor/solidworks-agent/skills/solidworks/scripts/sw_evidence.py",
+          "sha256": "e8872c4990ec3c33f48dd119e7dce294fe9a8898a1d7e004ba4ad0fecd70ca0a",
+          "size_bytes": 9958,
+          "git_blob_sha256": "e8872c4990ec3c33f48dd119e7dce294fe9a8898a1d7e004ba4ad0fecd70ca0a",
+          "checkout_transform": "none"
+        }
+      ]
+    },
+    {
+      "name": "solidworks-automation-skill",
+      "kind": "vendored",
+      "repository": "https://github.com/wzyn20051216/solidworks-automation-skill",
+      "commit": "a3ddc5694161299b50b9e9f688fcd6f0bf815da2",
+      "files": [
+        {
+          "source_path": "LICENSE",
+          "path": "vendor/solidworks-automation-skill/LICENSE",
+          "sha256": "697f5fbc7db69b6d8908a359695512e7df39271b4eb603c3643d224c7519813d",
+          "size_bytes": 1118,
+          "git_blob_sha256": "c4fdf46b5ebb48917864deffb876ef098af2d7ac7392616c9015e1a4cf6af862",
+          "checkout_transform": "Git checkout LF to CRLF only"
+        },
+        {
+          "source_path": "apps/desktop/cad_workbench/agent_providers.py",
+          "path": "vendor/solidworks-automation-skill/apps/desktop/cad_workbench/agent_providers.py",
+          "sha256": "0190f61b74b97d24f8ed64c17d13b26c9578f2d0112c2fd8d0b7ff445d9c3649",
+          "size_bytes": 11356,
+          "git_blob_sha256": "abaefa99f2624bae9f0cc38a2e0fb4b4a54228776e9c8c8f0143b7a233db1b8f",
+          "checkout_transform": "Git checkout LF to CRLF only"
+        }
+      ]
+    },
+    {
+      "name": "SolidWorks-MCP",
+      "kind": "reference_only",
+      "repository": "https://github.com/hjbaard/SolidWorks-MCP",
+      "commit": "9ea3c864950569f9b5544bc0aef981eda4ff639e",
+      "files": []
+    }
+  ]
+}

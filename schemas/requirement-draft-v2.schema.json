@@ -1,0 +1,427 @@
+{
+  "$defs": {
+    "DynamicDraftConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "parameter": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_]{0,63}$",
+          "title": "Parameter",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "mm",
+            "cm",
+            "m",
+            "deg",
+            "count"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "parameter",
+        "value",
+        "unit"
+      ],
+      "title": "DynamicDraftConstraint",
+      "type": "object"
+    },
+    "DynamicDraftParameter": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_]{0,63}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "enum": [
+                "mm",
+                "cm",
+                "m",
+                "deg",
+                "count"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Unit"
+        },
+        "source_kind": {
+          "enum": [
+            "user",
+            "rule",
+            "derived",
+            "cad",
+            "spec"
+          ],
+          "title": "Source Kind",
+          "type": "string"
+        },
+        "source_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Reference"
+        },
+        "confirmed": {
+          "title": "Confirmed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "unit",
+        "source_kind",
+        "source_reference",
+        "confirmed"
+      ],
+      "title": "DynamicDraftParameter",
+      "type": "object"
+    },
+    "Feature": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,59}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "operation": {
+          "enum": [
+            "add",
+            "cut"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "profile": {
+          "$ref": "#/$defs/Profile"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            }
+          ],
+          "title": "Start"
+        },
+        "depth": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            }
+          ],
+          "title": "Depth"
+        },
+        "pattern": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Pattern"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "operation",
+        "profile",
+        "start",
+        "depth",
+        "pattern"
+      ],
+      "title": "Feature",
+      "type": "object"
+    },
+    "Pattern": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "circular",
+            "linear"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "count": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            }
+          ],
+          "title": "Count"
+        },
+        "radius": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            }
+          ],
+          "title": "Radius"
+        },
+        "angle_deg": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            }
+          ],
+          "title": "Angle Deg"
+        },
+        "step": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "maxLength": 200,
+                "minLength": 1,
+                "type": "string"
+              }
+            ]
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Step",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "count",
+        "radius",
+        "angle_deg",
+        "step"
+      ],
+      "title": "Pattern",
+      "type": "object"
+    },
+    "Profile": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "circle",
+            "rectangle",
+            "polygon"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "center": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "maxLength": 200,
+                "minLength": 1,
+                "type": "string"
+              }
+            ]
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Center",
+          "type": "array"
+        },
+        "diameter": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Diameter"
+        },
+        "size": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "maxLength": 200,
+                "minLength": 1,
+                "type": "string"
+              }
+            ]
+          },
+          "maxItems": 2,
+          "title": "Size",
+          "type": "array"
+        },
+        "points": {
+          "items": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "maxLength": 200,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              ]
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array"
+          },
+          "maxItems": 512,
+          "title": "Points",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "center",
+        "diameter",
+        "size",
+        "points"
+      ],
+      "title": "Profile",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Open part vocabulary; execution is constrained by the feature DSL, not names.",
+  "properties": {
+    "schema_version": {
+      "const": "requirement-draft/2",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "family": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_]{0,63}$",
+      "title": "Family",
+      "type": "string"
+    },
+    "goal": {
+      "minLength": 1,
+      "title": "Goal",
+      "type": "string"
+    },
+    "parameters": {
+      "items": {
+        "$ref": "#/$defs/DynamicDraftParameter"
+      },
+      "title": "Parameters",
+      "type": "array"
+    },
+    "features": {
+      "items": {
+        "$ref": "#/$defs/Feature"
+      },
+      "title": "Features",
+      "type": "array"
+    },
+    "hard_constraints": {
+      "items": {
+        "$ref": "#/$defs/DynamicDraftConstraint"
+      },
+      "title": "Hard Constraints",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Questions",
+      "type": "array"
+    },
+    "conflicts": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Conflicts",
+      "type": "array"
+    },
+    "unsupported_requirements": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unsupported Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "family",
+    "goal",
+    "parameters",
+    "features",
+    "hard_constraints",
+    "questions",
+    "conflicts",
+    "unsupported_requirements"
+  ],
+  "title": "RequirementDraftV2",
+  "type": "object"
+}

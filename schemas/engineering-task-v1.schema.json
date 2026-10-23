@@ -1,0 +1,233 @@
+{
+  "$defs": {
+    "Baseline": {
+      "additionalProperties": false,
+      "properties": {
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "semantic_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Semantic Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "revision",
+        "semantic_hash"
+      ],
+      "title": "Baseline",
+      "type": "object"
+    },
+    "Parameter": {
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "enum": [
+            "mm",
+            "cm",
+            "m"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "source_id": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Id"
+        },
+        "confirmed": {
+          "title": "Confirmed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "value",
+        "unit",
+        "source_id",
+        "confirmed"
+      ],
+      "title": "Parameter",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "user",
+            "rule",
+            "derived",
+            "cad",
+            "spec"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "reference": {
+          "maxLength": 10000,
+          "minLength": 1,
+          "title": "Reference",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "reference"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "engineering-task/1",
+      "default": "engineering-task/1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "task_id": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "action": {
+      "enum": [
+        "create",
+        "modify"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "family": {
+      "enum": [
+        "plate",
+        "bracket",
+        "box"
+      ],
+      "title": "Family",
+      "type": "string"
+    },
+    "goal": {
+      "maxLength": 10000,
+      "minLength": 1,
+      "title": "Goal",
+      "type": "string"
+    },
+    "scope": {
+      "const": "geometry_review",
+      "default": "geometry_review",
+      "title": "Scope",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "parameters": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Parameter"
+      },
+      "title": "Parameters",
+      "type": "object"
+    },
+    "hard_constraints": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Hard Constraints",
+      "type": "object"
+    },
+    "baseline": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Baseline"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deliverables": {
+      "items": {
+        "enum": [
+          "native",
+          "step",
+          "preview"
+        ],
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Deliverables",
+      "type": "array"
+    },
+    "tolerance_mm": {
+      "default": 0.01,
+      "exclusiveMinimum": 0,
+      "maximum": 0.1,
+      "title": "Tolerance Mm",
+      "type": "number"
+    },
+    "rule_set_version": {
+      "const": "engineering-rules/1",
+      "default": "engineering-rules/1",
+      "title": "Rule Set Version",
+      "type": "string"
+    },
+    "skill_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Skill Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "task_id",
+    "revision",
+    "action",
+    "family",
+    "goal",
+    "sources",
+    "parameters",
+    "hard_constraints",
+    "baseline",
+    "deliverables",
+    "skill_sha256"
+  ],
+  "title": "EngineeringTask",
+  "type": "object"
+}

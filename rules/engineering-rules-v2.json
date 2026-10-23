@@ -1,0 +1,23 @@
+{
+  "rule_set_version": "engineering-rules/2",
+  "task_schema": "engineering-task/2",
+  "plan_schema": "cad-plan/2",
+  "part_family_allowlist": null,
+  "scope": "geometry_review",
+  "canonical_units": ["mm", "deg", "count"],
+  "input_units": ["mm", "cm", "m", "deg", "count"],
+  "modeling": {
+    "coordinate_system": "right-handed XY profile, positive Z extrusion",
+    "operations": ["add", "cut"],
+    "profiles": ["circle", "rectangle", "polygon"],
+    "patterns": ["circular", "linear"],
+    "expression_operators": ["+", "-", "*", "/", "()"],
+    "nonzero_dimensions_require_confirmed_parameter_references": true,
+    "all_execution_parameters_must_be_used": true,
+    "final_connected_solids": 1
+  },
+  "local_execution_budget": {"features": 256, "pattern_count": 256, "expanded_instances": 1024},
+  "independent_geometry": {"method": "layered GEOS planar CSG", "circle_segments": 8192, "volume_relative_tolerance": 0.00001},
+  "release": {"immutable_revision": true, "native_save_reopen": true, "preview_requires_explicit_review": true},
+  "unimplemented_operation_policy": "preserve intent, identify missing operation or specification; never reject by part name or silently simplify"
+}

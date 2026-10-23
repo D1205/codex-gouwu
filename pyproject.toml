@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mechanical-design-app"
+version = "0.1.0"
+description = "Versioned engineering tasks and verified local CAD execution for mechanical-design-sop"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.10,<3", "shapely==2.1.2", "Pillow>=10"]
+
+[project.optional-dependencies]
+cad = ["pywin32>=305; sys_platform == 'win32'", "comtypes>=1.2"]
+desktop = ["pyinstaller>=6,<7"]
+
+[project.scripts]
+mechanical-design = "mechanical_app.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mechanical_app*"]

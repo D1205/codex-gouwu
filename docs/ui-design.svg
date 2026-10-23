@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" fill="none">
+  <title>Mechanical Design 本机建模工作台 · 可编辑布局示意</title>
+  <desc>可导入 Penpot 的矢量界面设计稿。所有模型、对话、参数和版本状态均为布局示意，不代表实际 CAD 执行或制造验收结果。左侧需求整理，中央三维预览，右侧需求及来源确认，底部实际任务与产物入口。</desc>
+  <metadata>Design tokens: canvas #F4F3EF; surface #FFFFFF; ink #252C32; muted #7B8289; line #E4E5E0; accent #244F70; accent-soft #EDF3F7; pending #9A6A27; pending-soft #FBF5E9; radius 16; spacing 8,12,16,24; typography Microsoft YaHei UI / PingFang SC / sans-serif. Editable vector design only. No Penpot project has been created.</metadata>
+  <defs>
+    <linearGradient id="viewport" x1="360" y1="220" x2="1056" y2="730" gradientUnits="userSpaceOnUse"><stop stop-color="#F8F9F7"/><stop offset="1" stop-color="#EFF1EE"/></linearGradient>
+    <linearGradient id="plate-top" x1="500" y1="390" x2="880" y2="610" gradientUnits="userSpaceOnUse"><stop stop-color="#D9E0E2"/><stop offset="1" stop-color="#BEC9CD"/></linearGradient>
+    <linearGradient id="plate-front" x1="560" y1="580" x2="840" y2="680" gradientUnits="userSpaceOnUse"><stop stop-color="#91A3AA"/><stop offset="1" stop-color="#A4B4BA"/></linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.75" fill="#DCE1DE"/></pattern>
+  </defs>
+  <g id="canvas" data-name="Canvas">
+    <rect width="1440" height="1000" fill="#F4F3EF"/>
+  </g>
+  <g id="header" data-name="Header" font-family="Microsoft YaHei UI, PingFang SC, sans-serif">
+    <rect width="1440" height="80" fill="#FFFFFF"/>
+    <path d="M0 79.5H1440" stroke="#E4E5E0"/>
+    <rect x="24" y="23" width="34" height="34" rx="10" fill="#244F70"/>
+    <path d="M32 34L41 29L50 34V45L41 50L32 45V34Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M32 34L41 39L50 34M41 39V50" stroke="white" stroke-width="1.4"/>
+    <text x="70" y="39" font-size="15" font-weight="700" fill="#252C32">Mechanical Design</text>
+    <text x="70" y="56" font-size="10" letter-spacing="1.4" fill="#7B8289">让需求成为可检查的模型</text>
+    <path d="M275 27V53" stroke="#E4E5E0"/>
+    <text x="298" y="45" font-size="13" fill="#687079">工作台</text>
+    <path d="M356 37L360 41L356 45" stroke="#A0A6AB" stroke-width="1.4"/>
+    <text x="376" y="45" font-size="13" font-weight="600" fill="#252C32">四孔安装底板</text>
+    <rect x="1077" y="24" width="174" height="32" rx="16" fill="#F4F6F5" stroke="#E4E5E0"/>
+    <rect x="1090" y="34" width="12" height="9" rx="1.5" stroke="#6C777B" stroke-width="1.2"/>
+    <path d="M1096 43V47M1092 47H1100" stroke="#6C777B" stroke-width="1.2"/>
+    <text x="1110" y="45" font-size="11" fill="#546168">本机 CAD · 几何评审</text>
+    <rect x="1264" y="24" width="152" height="32" rx="8" fill="#FBF5E9"/>
+    <circle cx="1278" cy="40" r="3" fill="#9A6A27"/>
+    <text x="1289" y="45" font-size="11" fill="#926429">设计稿 · 布局示意</text>
+  </g>
+  <g id="project-heading" data-name="Project heading" font-family="Microsoft YaHei UI, PingFang SC, sans-serif">
+    <text x="24" y="119" font-size="24" font-weight="700" fill="#252C32">把想法，做成看得见的结构。</text>
+    <text x="25" y="143" font-size="12" fill="#7B8289">描述用途，确认关键尺寸，再生成与检查模型。</text>
+    <rect x="1126" y="106" width="105" height="34" rx="8" fill="#FFFFFF" stroke="#DDE1DE"/>
+    <path d="M1142 116V128M1138 124L1142 128L1146 124M1137 131H1147" stroke="#626D73" stroke-width="1.3" stroke-linecap="round"/>
+    <text x="1156" y="128" font-size="12" fill="#59646C">查看产物</text>
+    <rect x="1243" y="106" width="173" height="34" rx="8" fill="#244F70"/>
+    <path d="M1258 116L1267 122L1258 128V116Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/>
+    <text x="1278" y="128" font-size="12" font-weight="600" fill="#FFFFFF">确认需求后生成</text>
+  </g>
+  <g id="requirements-panel" data-name="Requirements and conversation" font-family="Microsoft YaHei UI, PingFang SC, sans-serif">
+    <rect x="24" y="166" width="304" height="706" rx="16" fill="#FFFFFF" stroke="#E4E5E0"/>
+    <text x="44" y="197" font-size="14" font-weight="700" fill="#252C32">从你的需求开始</text>
+    <rect x="249" y="183" width="59" height="22" rx="6" fill="#F4F5F2"/>
+    <text x="259" y="198" font-size="10" fill="#70797D">新手模式</text>
+    <text x="44" y="220" font-size="11" fill="#8B9196">像和设计师沟通一样，描述要解决的问题。</text>
+    <path d="M44 239H308" stroke="#ECEDE9"/>
+    <rect x="44" y="256" width="264" height="78" rx="10" fill="#F7F8F5"/>
+    <text x="58" y="278" font-size="10" font-weight="600" fill="#7B8289">示例需求</text>
+    <text x="58" y="300" font-size="12" fill="#3E4850">做一块 80 × 50 毫米的底板，</text>
+    <text x="58" y="319" font-size="12" fill="#3E4850">四个角留螺丝孔，用来固定小模块。</text>
+    <circle cx="54" cy="362" r="10" fill="#EDF3F7"/>
+    <path d="M50 362H58M54 358V366" stroke="#244F70" stroke-width="1.4"/>
+    <text x="72" y="367" font-size="11" font-weight="700" fill="#39586E">需求整理 · 示例</text>
+    <text x="44" y="396" font-size="12" fill="#4D5961">底板外形已明确，还需要确认厚度</text>
+    <text x="44" y="416" font-size="12" fill="#4D5961">和孔的位置。下面是可调整的建议。</text>
+    <rect x="44" y="435" width="264" height="101" rx="10" fill="#FBFAF6" stroke="#EEE8DB"/>
+    <text x="58" y="458" font-size="11" font-weight="600" fill="#7E6844">有 2 项建议等待确认</text>
+    <text x="58" y="484" font-size="12" fill="#525C63">板厚</text>
+    <text x="272" y="484" font-size="12" font-weight="600" text-anchor="end" fill="#3A434B">4 mm</text>
+    <path d="M58 496H294" stroke="#EEE8DB"/>
+    <text x="58" y="519" font-size="12" fill="#525C63">孔中心到相邻边</text>
+    <text x="272" y="519" font-size="12" font-weight="600" text-anchor="end" fill="#3A434B">10 mm</text>
+    <rect x="44" y="555" width="264" height="66" rx="10" fill="#EDF3F7"/>
+    <text x="58" y="578" font-size="10" fill="#688396">示例局部修改</text>
+    <text x="58" y="601" font-size="12" fill="#33576F">四个孔都改成 6 毫米，外形别变。</text>
+    <text x="44" y="650" font-size="11" fill="#8B9196">先点选模型上的部位，也可以直接描述。</text>
+    <rect x="44" y="666" width="264" height="133" rx="12" fill="#FFFFFF" stroke="#C9D5DD"/>
+    <text x="58" y="693" font-size="12" fill="#A0A7AC">你想做什么，或想改哪里？</text>
+    <rect x="58" y="751" width="72" height="27" rx="7" fill="#F5F6F3"/>
+    <path d="M68 760L72 756L76 760V767H68V760Z" stroke="#7C868B" stroke-width="1.1"/>
+    <text x="83" y="769" font-size="10" fill="#68757D">参考文件</text>
+    <rect x="264" y="748" width="30" height="30" rx="8" fill="#244F70"/>
+    <path d="M273 768L279 758L285 768M279 759V771" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="44" y="825" font-size="10" fill="#989FA3">缺少的信息会明确询问，建议值需要你确认。</text>
+    <text x="44" y="844" font-size="10" fill="#989FA3">本画面内容为布局示意，未提交实际任务。</text>
+  </g>
+  <g id="preview-panel" data-name="Model preview and semantic selection" font-family="Microsoft YaHei UI, PingFang SC, sans-serif">
+    <rect x="344" y="166" width="720" height="706" rx="16" fill="#FFFFFF" stroke="#E4E5E0"/>
+    <text x="364" y="197" font-size="14" font-weight="700" fill="#252C32">模型预览</text>
+    <rect x="455" y="181" width="139" height="26" rx="6" fill="#FBF5E9"/>
+    <circle cx="468" cy="194" r="3" fill="#A6752F"/>
+    <text x="478" y="198" font-size="10" fill="#9A6A27">revision 2 · 待评审</text>
+    <text x="1044" y="198" font-size="10" text-anchor="end" fill="#8B9196">三维布局示意</text>
+    <rect x="360" y="220" width="688" height="477" rx="12" fill="url(#viewport)"/>
+    <rect x="360" y="220" width="688" height="477" rx="12" fill="url(#dots)"/>
+    <rect x="376" y="236" width="260" height="28" rx="6" fill="#FFFFFF" opacity="0.9"/>
+    <text x="388" y="254" font-size="10" fill="#6B777D">示例版本 · revision 1 → 待评审 revision 2</text>
+    <g id="viewport-tools" data-name="Viewport tools">
+      <rect x="1000" y="238" width="32" height="140" rx="8" fill="#FFFFFF" stroke="#E1E5E1"/>
+      <path d="M1010 249H1022V261H1010V249ZM1013 252H1019V258H1013V252Z" stroke="#718087" stroke-width="1.1"/>
+      <path d="M1009 286H1023M1016 279V293" stroke="#718087" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M1009 320H1023" stroke="#718087" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M1010 348L1016 344L1022 348V356L1016 360L1010 356V348ZM1010 348L1016 352L1022 348M1016 352V360" stroke="#718087" stroke-width="1.1" stroke-linejoin="round"/>
+    </g>
+    <g id="plate-illustration" data-name="Editable schematic model, not CAD output">
+      <ellipse cx="708" cy="603" rx="231" ry="35" fill="#DCE2DF" opacity="0.55"/>
+      <path d="M473 460L716 352L937 485L694 604L473 460Z" fill="url(#plate-top)" stroke="#A6B5BC" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M473 460V483L694 627V604L473 460Z" fill="#A8B8BE" stroke="#95A8B0" stroke-width="1.2" stroke-linejoin="round"/>
+      <path d="M694 604L937 485V508L694 627V604Z" fill="url(#plate-front)" stroke="#8E9FA8" stroke-width="1.2" stroke-linejoin="round"/>
+      <ellipse cx="539" cy="464" rx="15" ry="9" transform="rotate(-5 539 464)" fill="#758C97" stroke="#55788F" stroke-width="1.4"/>
+      <path d="M525 464C528 471 549 474 553 464" stroke="#C6D3D9" stroke-width="2"/>
+      <ellipse cx="716" cy="387" rx="15" ry="9" transform="rotate(-5 716 387)" fill="#758C97" stroke="#55788F" stroke-width="1.4"/>
+      <path d="M702 387C705 394 726 397 730 387" stroke="#C6D3D9" stroke-width="2"/>
+      <ellipse cx="693" cy="558" rx="15" ry="9" transform="rotate(-5 693 558)" fill="#758C97" stroke="#244F70" stroke-width="2"/>
+      <path d="M679 558C682 565 703 568 707 558" stroke="#D9E5EC" stroke-width="2"/>
+      <ellipse cx="870" cy="481" rx="15" ry="9" transform="rotate(-5 870 481)" fill="#758C97" stroke="#55788F" stroke-width="1.4"/>
+      <path d="M856 481C859 488 880 491 884 481" stroke="#C6D3D9" stroke-width="2"/>
+      <path d="M539 464L716 387L870 481L693 558L539 464Z" stroke="#52758B" stroke-width="1.1" stroke-dasharray="5 5" opacity="0.48"/>
+      <ellipse cx="693" cy="558" rx="26" ry="16" stroke="#244F70" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <circle cx="708" cy="552" r="4" fill="#244F70" stroke="#FFFFFF" stroke-width="2"/>
+      <path d="M708 552L770 579H812" stroke="#244F70" stroke-width="1.3"/>
+      <rect x="812" y="554" width="180" height="57" rx="9" fill="#FFFFFF" stroke="#B9C9D4"/>
+      <circle cx="828" cy="571" r="3" fill="#244F70"/>
+      <text x="839" y="576" font-size="11" font-weight="700" fill="#244F70">安装孔组 · 4 个孔</text>
+      <text x="826" y="596" font-size="10" fill="#7B8289">示例变更：Ø5 → Ø6 mm</text>
+      <path d="M477 500L451 514M698 643L672 657M452 514L674 657" stroke="#84949B" stroke-width="1"/>
+      <path d="M448 514H456M670 657H678" stroke="#84949B" stroke-width="1"/>
+      <rect x="527" y="563" width="54" height="23" rx="5" fill="#F6F8F5"/>
+      <text x="554" y="579" text-anchor="middle" font-size="11" fill="#64757D">80 mm</text>
+      <path d="M947 486L964 496M709 629L728 640M963 498L731 641" stroke="#84949B" stroke-width="1"/>
+      <rect x="825" y="566" width="54" height="23" rx="5" fill="#F6F8F5" visibility="hidden"/>
+    </g>
+    <g id="axis" data-name="View axes">
+      <circle cx="399" cy="646" r="2" fill="#87949A"/>
+      <path d="M399 646H422M399 646L385 657M399 646V621" stroke="#7D8E96" stroke-width="1.2" stroke-linecap="round"/>
+      <text x="428" y="650" font-size="9" fill="#7D8E96">X</text>
+      <text x="376" y="668" font-size="9" fill="#7D8E96">Y</text>
+      <text x="396" y="615" font-size="9" fill="#7D8E96">Z</text>
+    </g>
+    <rect x="729" y="658" width="303" height="25" rx="6" fill="#FFFFFF" opacity="0.9"/>
+    <text x="742" y="675" font-size="10" fill="#7B8289">拖动旋转 · 滚轮缩放 · 点选语义标记定位修改</text>
+    <g id="selection-card" data-name="Semantic selection">
+      <rect x="360" y="713" width="688" height="74" rx="10" fill="#F2F6F8" stroke="#D9E4EB"/>
+      <circle cx="386" cy="739" r="9" stroke="#486B83" stroke-width="1.4"/>
+      <circle cx="386" cy="739" r="3" fill="#486B83"/>
+      <text x="405" y="740" font-size="12" font-weight="600" fill="#36576D">已选部位 · 安装孔组</text>
+      <text x="405" y="766" font-size="10" fill="#7F8D96">语义标识 plate.holes · 对应参数 hole_diameter</text>
+      <rect x="934" y="731" width="97" height="31" rx="7" fill="#FFFFFF" stroke="#CEDCE5"/>
+      <text x="950" y="751" font-size="11" fill="#45677E">修改这个部位</text>
+    </g>
+    <text x="364" y="814" font-size="11" fill="#7F888E">本次拟修改</text>
+    <text x="444" y="814" font-size="11" font-weight="600" fill="#425763">孔径 5 → 6 mm</text>
+    <path d="M566 804V818" stroke="#DBE0DE"/>
+    <text x="580" y="814" font-size="11" fill="#7F888E">保护约束：外形与孔中心位置保持</text>
+    <path d="M364 833H1044" stroke="#ECEDE9"/>
+    <text x="364" y="855" font-size="10" fill="#959DA2">仅演示布局；实际界面读取本机 CAD 预览、单位、模型指纹与对应版本。</text>
+  </g>
+  <g id="engineering-card" data-name="Engineering requirement card" font-family="Microsoft YaHei UI, PingFang SC, sans-serif">
+    <rect x="1080" y="166" width="336" height="706" rx="16" fill="#FFFFFF" stroke="#E4E5E0"/>
+    <text x="1100" y="197" font-size="14" font-weight="700" fill="#252C32">工程需求卡</text>
+    <rect x="1329" y="183" width="67" height="23" rx="6" fill="#F6F6F2"/>
+    <text x="1340" y="199" font-size="10" fill="#727C82">草稿示例</text>
+    <text x="1100" y="221" font-size="11" fill="#8B9196">每个尺寸都有来源，确认后再用于建模。</text>
+    <path d="M1100 240H1396" stroke="#ECEDE9"/>
+    <text x="1100" y="266" font-size="10" font-weight="600" fill="#90989C">当前范围</text>
+    <text x="1100" y="291" font-size="13" font-weight="600" fill="#3A464E">四孔安装底板</text>
+    <text x="1100" y="312" font-size="11" fill="#7F898F">几何评审 · 可编辑模型与 STEP</text>
+    <rect x="1100" y="330" width="296" height="45" rx="8" fill="#F8F8F5"/>
+    <text x="1112" y="348" font-size="10" fill="#7F898F">已发布基线（示例）</text>
+    <text x="1112" y="364" font-size="11" fill="#485761">revision 1</text>
+    <text x="1384" y="364" text-anchor="end" font-size="10" fill="#7F898F">待评审 revision 2</text>
+    <text x="1100" y="404" font-size="11" font-weight="700" fill="#58656D">关键尺寸</text>
+    <text x="1396" y="404" font-size="10" text-anchor="end" fill="#90989C">单位 mm</text>
+    <g id="dimension-row-length" data-name="Dimension length user provided">
+      <text x="1100" y="435" font-size="12" fill="#56636B">长度</text>
+      <text x="1283" y="435" font-size="13" font-weight="600" text-anchor="end" fill="#28363F">80</text>
+      <rect x="1300" y="420" width="96" height="22" rx="5" fill="#F0F4F5"/>
+      <text x="1310" y="435" font-size="10" fill="#65808F">来自你的描述</text>
+      <path d="M1100 451H1396" stroke="#ECEDE9"/>
+    </g>
+    <g id="dimension-row-width" data-name="Dimension width user provided">
+      <text x="1100" y="478" font-size="12" fill="#56636B">宽度</text>
+      <text x="1283" y="478" font-size="13" font-weight="600" text-anchor="end" fill="#28363F">50</text>
+      <rect x="1300" y="463" width="96" height="22" rx="5" fill="#F0F4F5"/>
+      <text x="1310" y="478" font-size="10" fill="#65808F">来自你的描述</text>
+      <path d="M1100 494H1396" stroke="#ECEDE9"/>
+    </g>
+    <g id="dimension-row-height" data-name="Dimension thickness proposed">
+      <text x="1100" y="521" font-size="12" fill="#56636B">厚度</text>
+      <text x="1283" y="521" font-size="13" font-weight="600" text-anchor="end" fill="#8B652E">4</text>
+      <rect x="1300" y="506" width="96" height="22" rx="5" fill="#FBF5E9"/>
+      <text x="1310" y="521" font-size="10" fill="#9A6A27">建议 · 待确认</text>
+      <path d="M1100 537H1396" stroke="#ECEDE9"/>
+    </g>
+    <g id="dimension-row-hole" data-name="Dimension hole diameter changed">
+      <rect x="1091" y="544" width="314" height="37" rx="7" fill="#EDF3F7"/>
+      <text x="1100" y="564" font-size="12" fill="#335870">孔径</text>
+      <text x="1254" y="564" font-size="11" text-anchor="end" text-decoration="line-through" fill="#9BA8AF">5</text>
+      <text x="1283" y="564" font-size="13" font-weight="700" text-anchor="end" fill="#244F70">6</text>
+      <rect x="1300" y="549" width="96" height="22" rx="5" fill="#E0EAF0"/>
+      <text x="1310" y="564" font-size="10" fill="#456B85">来自本次修改</text>
+      <path d="M1100 585H1396" stroke="#ECEDE9"/>
+    </g>
+    <g id="dimension-row-margin" data-name="Dimension edge margin proposed">
+      <text x="1100" y="612" font-size="12" fill="#56636B">孔中心距边</text>
+      <text x="1283" y="612" font-size="13" font-weight="600" text-anchor="end" fill="#8B652E">10</text>
+      <rect x="1300" y="597" width="96" height="22" rx="5" fill="#FBF5E9"/>
+      <text x="1310" y="612" font-size="10" fill="#9A6A27">建议 · 待确认</text>
+    </g>
+    <rect x="1100" y="635" width="296" height="63" rx="9" fill="#F7F8F5"/>
+    <path d="M1113 652V660H1123V652M1115 652V649C1115 645 1121 645 1121 649V652" stroke="#7A898F" stroke-width="1.2" stroke-linejoin="round"/>
+    <text x="1133" y="657" font-size="11" font-weight="600" fill="#65747C">本次保护的尺寸</text>
+    <text x="1112" y="683" font-size="11" fill="#7F898F">外形 80 × 50 · 孔中心位置</text>
+    <rect x="1100" y="714" width="296" height="51" rx="8" fill="#FBF5E9"/>
+    <circle cx="1116" cy="730" r="5" stroke="#B08A51" stroke-width="1.2"/>
+    <path d="M1116 727V730M1116 733V733.5" stroke="#B08A51" stroke-width="1.1" stroke-linecap="round"/>
+    <text x="1128" y="734" font-size="10" fill="#9A763D">2 项建议待确认，当前不提交 CAD。</text>
+    <text x="1112" y="753" font-size="10" fill="#A08A68">检查范围仅为几何，不包含制造或承载验收。</text>
+    <rect x="1100" y="785" width="296" height="38" rx="8" fill="#244F70"/>
+    <text x="1248" y="809" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">核对并确认需求</text>
+    <text x="1248" y="848" text-anchor="middle" font-size="10" fill="#959DA2">确认会生成新修订，保留原版本供比较。</text>
+  </g>
+  <g id="artifacts-bar" data-name="Artifacts and actual task status" font-family="Microsoft YaHei UI, PingFang SC, sans-serif">
+    <rect x="24" y="888" width="1392" height="78" rx="14" fill="#FFFFFF" stroke="#E4E5E0"/>
+    <text x="44" y="915" font-size="12" font-weight="700" fill="#3D4951">任务与产物</text>
+    <text x="44" y="938" font-size="10" fill="#969EA3">实际状态由本机服务回传</text>
+    <path d="M226 907V947" stroke="#E4E5E0"/>
+    <rect x="246" y="904" width="222" height="46" rx="8" fill="#F8F9F6"/>
+    <path d="M260 916H268L272 920V935H260V916ZM268 916V921H272" stroke="#8B989E" stroke-width="1.2"/>
+    <text x="284" y="922" font-size="11" fill="#56646C">可编辑模型</text>
+    <text x="284" y="939" font-size="10" fill="#99A1A6">尚未生成 · 布局示例</text>
+    <rect x="480" y="904" width="222" height="46" rx="8" fill="#F8F9F6"/>
+    <path d="M494 916H502L506 920V935H494V916ZM502 916V921H506" stroke="#8B989E" stroke-width="1.2"/>
+    <text x="518" y="922" font-size="11" fill="#56646C">STEP 交换文件</text>
+    <text x="518" y="939" font-size="10" fill="#99A1A6">尚未生成 · 布局示例</text>
+    <rect x="714" y="904" width="222" height="46" rx="8" fill="#F8F9F6"/>
+    <path d="M728 916H740V935H728V916ZM731 922H737M731 926H737M731 930H735" stroke="#8B989E" stroke-width="1.2"/>
+    <text x="752" y="922" font-size="11" fill="#56646C">尺寸与几何检查</text>
+    <text x="752" y="939" font-size="10" fill="#99A1A6">尚未运行 · 布局示例</text>
+    <path d="M961 907V947" stroke="#E4E5E0"/>
+    <circle cx="986" cy="920" r="4" fill="#B3B8B8"/>
+    <text x="999" y="924" font-size="11" fill="#68767E">等待确认需求</text>
+    <text x="982" y="944" font-size="10" fill="#969EA3">未连接本画面的示例数据到 CAD 执行</text>
+    <text x="1396" y="932" text-anchor="end" font-size="11" fill="#6B7C86">任务详情 ↗</text>
+  </g>
+  <g id="footer" data-name="Footer" font-family="Microsoft YaHei UI, PingFang SC, sans-serif">
+    <text x="24" y="987" font-size="10" fill="#9BA1A5">MECHANICAL DESIGN · UI DESIGN / 1440 × 1000</text>
+    <text x="1416" y="987" text-anchor="end" font-size="10" fill="#9BA1A5">可编辑矢量 · 仅布局示意 · 不代表实际模型或验收结果</text>
+  </g>
+</svg>

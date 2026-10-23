@@ -1,0 +1,22 @@
+{
+  "rule_set_version": "engineering-rules/1",
+  "scope": "geometry_review",
+  "canonical_unit": "mm",
+  "dimension_range_mm": {"exclusive_minimum": 0, "maximum": 1000000},
+  "default_tolerance_mm": 0.01,
+  "source_kinds": ["user", "rule", "derived", "cad", "spec"],
+  "readiness_source_kinds": ["user", "cad", "spec"],
+  "family_parameters": {
+    "plate": ["length", "width", "height", "hole_diameter", "hole_margin"],
+    "bracket": ["length", "width", "height", "thickness"],
+    "box": ["length", "width", "height", "wall"]
+  },
+  "capability_allowlist": ["create_plate", "create_bracket", "create_box", "rebuild", "measure", "save", "reopen", "export", "preview"],
+  "geometry_rules": {
+    "plate": "Four equal diameter through holes at (m,m),(L-m,m),(L-m,W-m),(m,W-m); m-d/2>tolerance and min(L-2m,W-2m)-d>tolerance.",
+    "bracket": "L section in XY, leg length L, leg height H, thickness t; extrusion Z=W. min(L,H)-t>tolerance.",
+    "box": "Open-top shell with flat bottom, outer L,W,H and wall w. min(L,W)-2w>tolerance and H-w>tolerance. No lid or implied fixings."
+  },
+  "not_covered": ["manufacturing", "strength", "assembly_path", "motion", "control", "physical_acceptance"],
+  "rule_ids": ["contract_invalid", "skill_lock_missing", "skill_lock_changed", "skill_version", "parameter_set", "duplicate_source", "unknown_parameter", "unconfirmed_parameter", "source_missing", "proposal_unconfirmed", "dimension_range", "hole_breakout", "hole_overlap", "bracket_thickness", "box_wall", "constraint_unknown", "constraint_invalid", "constraint_conflict", "deliverables", "invalid_create_version", "baseline_missing", "revision_sequence", "stale_revision", "stale_baseline", "plan_tampered"]
+}

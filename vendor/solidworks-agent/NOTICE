@@ -1,0 +1,23 @@
+SolidWorks Agent
+
+This project includes code derived from:
+
+  SolidWorks Agentic Automation
+  https://github.com/WilliamDee-Huang/solidworks-agentic-automation
+  Licensed under the MIT License.
+
+  which itself derives from
+
+  SolidWorks Automation Skill
+  https://github.com/wzyn20051216/solidworks-automation-skill
+  Licensed under the MIT License.
+
+The original MIT license and copyright notice are preserved in LICENSE.
+
+Contributions in this repository include English translation, SolidWorks API contract
+repairs verified against the SolidWorks 2025 type libraries, the pinned runtime,
+COM-identity document ownership, numerical inspection, portable packaging, the live
+qualification suite, and multi-harness plugin packaging.
+
+SolidWorks is a trademark of Dassault Systemes SolidWorks Corporation. This project is
+independent and is not affiliated with or endorsed by Dassault Systemes.

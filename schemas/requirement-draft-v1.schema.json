@@ -1,0 +1,193 @@
+{
+  "$defs": {
+    "DraftConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "parameter": {
+          "enum": [
+            "length",
+            "width",
+            "height",
+            "hole_diameter",
+            "hole_margin",
+            "thickness",
+            "wall"
+          ],
+          "title": "Parameter",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "enum": [
+            "mm",
+            "cm",
+            "m"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "parameter",
+        "value",
+        "unit"
+      ],
+      "title": "DraftConstraint",
+      "type": "object"
+    },
+    "DraftParameter": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "enum": [
+            "length",
+            "width",
+            "height",
+            "hole_diameter",
+            "hole_margin",
+            "thickness",
+            "wall"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "enum": [
+                "mm",
+                "cm",
+                "m"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Unit"
+        },
+        "source_kind": {
+          "enum": [
+            "user",
+            "rule",
+            "derived",
+            "cad",
+            "spec"
+          ],
+          "title": "Source Kind",
+          "type": "string"
+        },
+        "source_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Reference"
+        },
+        "confirmed": {
+          "title": "Confirmed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "unit",
+        "source_kind",
+        "source_reference",
+        "confirmed"
+      ],
+      "title": "DraftParameter",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "requirement-draft/1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "family": {
+      "enum": [
+        "plate",
+        "bracket",
+        "box",
+        "unsupported"
+      ],
+      "title": "Family",
+      "type": "string"
+    },
+    "goal": {
+      "minLength": 1,
+      "title": "Goal",
+      "type": "string"
+    },
+    "parameters": {
+      "items": {
+        "$ref": "#/$defs/DraftParameter"
+      },
+      "title": "Parameters",
+      "type": "array"
+    },
+    "hard_constraints": {
+      "items": {
+        "$ref": "#/$defs/DraftConstraint"
+      },
+      "title": "Hard Constraints",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Questions",
+      "type": "array"
+    },
+    "conflicts": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Conflicts",
+      "type": "array"
+    },
+    "unsupported_requirements": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Unsupported Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "family",
+    "goal",
+    "parameters",
+    "hard_constraints",
+    "questions",
+    "conflicts",
+    "unsupported_requirements"
+  ],
+  "title": "RequirementDraft",
+  "type": "object"
+}

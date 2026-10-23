@@ -1,0 +1,190 @@
+{
+  "$defs": {
+    "Baseline": {
+      "additionalProperties": false,
+      "properties": {
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "semantic_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Semantic Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "revision",
+        "semantic_hash"
+      ],
+      "title": "Baseline",
+      "type": "object"
+    },
+    "Operation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "op": {
+          "enum": [
+            "create_plate",
+            "create_bracket",
+            "create_box",
+            "rebuild",
+            "measure",
+            "save",
+            "reopen",
+            "export",
+            "preview"
+          ],
+          "title": "Op",
+          "type": "string"
+        },
+        "parameters": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "enum": [
+                  "step",
+                  "stl"
+                ],
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "op",
+        "parameters"
+      ],
+      "title": "Operation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "cad-plan/1",
+      "default": "cad-plan/1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "task_id": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,79}$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "revision": {
+      "minimum": 1,
+      "title": "Revision",
+      "type": "integer"
+    },
+    "family": {
+      "enum": [
+        "plate",
+        "bracket",
+        "box"
+      ],
+      "title": "Family",
+      "type": "string"
+    },
+    "scope": {
+      "const": "geometry_review",
+      "default": "geometry_review",
+      "title": "Scope",
+      "type": "string"
+    },
+    "parameters_mm": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Parameters Mm",
+      "type": "object"
+    },
+    "operations": {
+      "items": {
+        "$ref": "#/$defs/Operation"
+      },
+      "title": "Operations",
+      "type": "array"
+    },
+    "baseline": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Baseline"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "deliverables": {
+      "items": {
+        "enum": [
+          "native",
+          "step",
+          "preview"
+        ],
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Deliverables",
+      "type": "array"
+    },
+    "hard_constraints_mm": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Hard Constraints Mm",
+      "type": "object"
+    },
+    "tolerance_mm": {
+      "exclusiveMinimum": 0,
+      "maximum": 0.1,
+      "title": "Tolerance Mm",
+      "type": "number"
+    },
+    "semantic_hash": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Semantic Hash",
+      "type": "string"
+    },
+    "rule_set_version": {
+      "const": "engineering-rules/1",
+      "default": "engineering-rules/1",
+      "title": "Rule Set Version",
+      "type": "string"
+    },
+    "skill_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Skill Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "task_id",
+    "revision",
+    "family",
+    "parameters_mm",
+    "operations",
+    "baseline",
+    "deliverables",
+    "hard_constraints_mm",
+    "tolerance_mm",
+    "semantic_hash",
+    "skill_sha256"
+  ],
+  "title": "CADPlan",
+  "type": "object"
+}

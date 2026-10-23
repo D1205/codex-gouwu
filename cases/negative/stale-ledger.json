@@ -1,0 +1,63 @@
+{
+  "schema_version": "engineering-task/1",
+  "task_id": "plate-demo",
+  "revision": 2,
+  "action": "modify",
+  "family": "plate",
+  "goal": "Confirmed plate geometry pilot",
+  "scope": "geometry_review",
+  "sources": [
+    {
+      "id": "user-spec",
+      "kind": "user",
+      "reference": "Synthetic fixed benchmark specification; these dimensions are test inputs, not an actual user measurement or manufacturing approval."
+    }
+  ],
+  "parameters": {
+    "length": {
+      "value": 80,
+      "unit": "mm",
+      "source_id": "user-spec",
+      "confirmed": true
+    },
+    "width": {
+      "value": 50,
+      "unit": "mm",
+      "source_id": "user-spec",
+      "confirmed": true
+    },
+    "height": {
+      "value": 4,
+      "unit": "mm",
+      "source_id": "user-spec",
+      "confirmed": true
+    },
+    "hole_diameter": {
+      "value": 5,
+      "unit": "mm",
+      "source_id": "user-spec",
+      "confirmed": true
+    },
+    "hole_margin": {
+      "value": 10,
+      "unit": "mm",
+      "source_id": "user-spec",
+      "confirmed": true
+    }
+  },
+  "hard_constraints": {
+    "length": 80.0
+  },
+  "baseline": {
+    "revision": 1,
+    "semantic_hash": "1f422793269edac8d7ed4386b488d55f150ed361c855a69bd436f6ffe76258c1"
+  },
+  "deliverables": [
+    "native",
+    "step",
+    "preview"
+  ],
+  "tolerance_mm": 0.01,
+  "rule_set_version": "engineering-rules/1",
+  "skill_sha256": "605b5c595fef9e1ebed850b56569136808b06a829c450fed55143e645a18f05f"
+}
